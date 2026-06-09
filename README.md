@@ -74,18 +74,3 @@ They then switch to authority view using the role toggle in the header.
 - **Leaderboard** — top users ranked by points
 - **Role Authorization** — only DB-level AUTHORITY users can switch to authority view
 
-## API Reference
-
-| Method | Path | Auth | Description |
-|---|---|---|---|
-| GET | `/api/ping` | ❌ | Health check |
-| GET | `/api/auth/google` | ❌ | Start OAuth |
-| GET | `/api/auth/me` | ✅ | Current user |
-| POST | `/api/auth/signout` | ✅ | Sign out |
-| GET | `/api/issues` | ✅ | List issues (`?mine=true` for own issues) |
-| POST | `/api/issues` | ✅ | Create issue (multipart/form-data with optional photo) |
-| POST | `/api/issues/:id/upvote` | ✅ | Upvote |
-| PATCH | `/api/issues/:id/status` | ✅ Authority | Update status |
-| GET | `/api/leaderboard` | ✅ | Leaderboard |
-| PATCH | `/api/users/role` | ✅ | Switch role (authority-gated) |
-| POST | `/api/users/make-authority` | Admin secret | Grant authority role |
